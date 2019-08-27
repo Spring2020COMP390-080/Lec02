@@ -28,19 +28,32 @@ public class Example2 {
 		
 		boolean l = true;
 		
-		// Doing math with integers always results 
+		// Doing math with only integers always results 
 		// in an integer (i.e., any fractional part is lost
 		a = 8;
 		b = 7;
 		int res = a/b; // res is now 1
 		System.out.println("res = " + res);
 		
-		// If any of your values are real, you'll get a 
-		// real result.
+		// If one of the values to an operand is real, 
+		// you'll get a real result.
 		a = 10;
 		h = 3.5;
-		double dres = a/h;
+		double dres = a/h; 
 		System.out.println("dres = " + dres);
+		
+		// Be careful when mixing integer and reals
+		// in an expression (especiall with division)
+		
+		int num_right = 5;
+		int num_questions = 8;
+		double percentage = (num_right / num_questions) * 100.0;
+		
+		System.out.println("wrong percentage: " + percentage);
+		
+		percentage = ((num_right * 1.0) / num_questions) * 100.0;
+		
+		System.out.println("right percentage: " + percentage);
 		
 		// The ternary operator is very handy for 
 		// choosing between two different values
@@ -73,9 +86,18 @@ public class Example2 {
 		boolean bres = (a > 5) && checkIfPositive(b);
 		System.out.println("bres = " + bres);
 		
+		
+		// checkIfPositive below is never called because
+		// right side was enough.
+		
 		bres = (a > 5) || checkIfPositive(b);
 		System.out.println("bres = " + bres);
 		
+		
+		int aa = 5;
+		int bb = 3;
+		int cc = aa/bb;
+		System.out.println(cc);
 	}
 	
 	public static boolean checkIfPositive(int x) {
