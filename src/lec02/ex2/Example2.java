@@ -43,7 +43,7 @@ public class Example2 {
 		System.out.println("dres = " + dres);
 		
 		// Be careful when mixing integer and reals
-		// in an expression (especiall with division)
+		// in an expression (especially with division)
 		
 		int num_right = 5;
 		int num_questions = 8;
