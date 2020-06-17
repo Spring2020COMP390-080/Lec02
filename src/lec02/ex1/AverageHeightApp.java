@@ -2,6 +2,8 @@ package lec02.ex1;
 
 public class AverageHeightApp {
 
+	// A comment to test pushing to github.
+
 	public static void main(String[] args) {
 
 		double[] heights = readHeightData();
